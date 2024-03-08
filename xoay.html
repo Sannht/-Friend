@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+:root {
+  --dark-color: #000;
+}
+
+
+
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.rotator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin: auto;
+  width: 55%;
+  height: 50%;
+  transform-style: preserve-3d;
+  animation: roter 17s linear infinite;
+  z-index: 1;
+}
+
+/* .rotator:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes roter {
+  from {
+    transform: rotateY(10deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.text{
+    position: fixed;
+    text-align: center;
+    left: 2%;
+    top: 90%;
+    font-family: 'Rocher';
+    font-size: 50px;
+}
+
+
+
+.items {
+  position: absolute;
+  height:  600px;
+  width: 500px;
+  overflow: hidden;
+
+}
+ .items:hover img {
+  transform: scale(1.2);
+} 
+
+.items img {
+  height: 400px;
+  width: 250px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  transition: all 2s ease;
+
+}
+
+
+.text .t2{
+  position: fixed;
+  left: 27%;
+  top: 90%;
+}
+
+
+.text .t3{
+  position: fixed;
+  right: 25%;
+  top: 90%;
+}
+
+
+.text .t4{
+  position: fixed;
+  left: 79%;
+  top: 90%;
+}
+
+
+@media only screen and (min-width: 1300px){
+.text{
+  font-size: 80px;
+  top: 80%;
+}
+  .text .t2{
+  position: fixed;
+  left: 30%;
+  top: 80%;
+}
+
+
+.text .t3{
+  position: fixed;
+  right: 16%;
+  top: 80%;
+}
+
+
+.text .t4{
+  position: fixed;
+  left: 85%;
+  top: 80%;
+}
+
+}
+
+@media only screen and (max-width: 1000px){
+  .items img {
+  height: 400px;
+  width: 270px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  transition: all 2s ease;
+
+}
+
+
+  .text{
+    font-size: 40px;
+    top: 75%;
+  }
+.text .t2{
+  position: fixed;
+  left: 20%;
+  top: 80%;
+}
+
+
+.text .t3{
+  position: fixed;
+  right: 60%;
+  top: 85%;
+}
+
+
+.text .t4{
+  position: fixed;
+  left: 39%;
+  top: 90%;
+}
+
+}
+
+@media only screen and (max-width: 600px){
+
+.rotator {
+position: absolute;
+left: 0;
+right: 0;
+top: 10%;
+margin: auto;
+width: 55%;
+height: 50%;
+transform-style: preserve-3d;
+animation: roter 17s linear infinite;
+}
+.items {
+position: absolute;
+height:  400px;
+width: 200x;
+overflow: hidden;
+
+}
+.items img {
+height: 400px;
+width: 250px;
+border: 2px solid #333;
+border-radius: 10px;
+box-shadow: 0 0 10px #333;
+transition: all 2s ease;
+}
+.text{
+  font-size: 30px;
+}
+
+
+
+}
+
+.items:first-child {
+  transform: rotateY(calc(40deg * 1)) translateZ(300px);
+}
+
+.items:nth-child(2) {
+  transform: rotateY(calc(40deg * 2)) translateZ(300px);
+}
+
+.items:nth-child(3) {
+  transform: rotateY(calc(40deg * 3)) translateZ(300px);
+}
+
+.items:nth-child(4) {
+  transform: rotateY(calc(40deg * 4)) translateZ(300px);
+}
+
+.items:nth-child(5) {
+  transform: rotateY(calc(40deg * 5)) translateZ(300px);
+}
+
+.items:nth-child(6) {
+  transform: rotateY(calc(40deg * 6)) translateZ(300px);
+}
+
+.items:nth-child(7) {
+  transform: rotateY(calc(40deg * 7)) translateZ(300px);
+}
+
+.items:nth-child(8) {
+  transform: rotateY(calc(40deg * 8)) translateZ(300px);
+}
+
+.items:nth-child(9) {
+  transform: rotateY(calc(40deg * 9)) translateZ(300px);
+}
+</style>
+<script src="nhac.js"></script>
+<link rel="stylesheet" href="8-3.css">
+<link rel="stylesheet" href="text.css">
+<body>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake" style="font-size:30px">✿</div>
+    <div class="snowflake">✿</div>
+    <div class="snowflake" style="font-size:40px">✿</div>
+    <div class="snowflake">✿</div>
+    <div class="snowflake" style="font-size:30px">✿</div>
+    <div class="snowflake" style="font-size:22px">🌸</div>
+    <div class="snowflake" style="font-size:50px">✿</div>
+    <div class="snowflake" style="font-size:20px">🌸</div>
+    <div class="snowflake" style="font-size:70px">✿</div>
+    <div class="snowflake" style="font-size:20px">🌸</div>
+      </div>
+      <canvas id="canvas"></canvas>
+      <script src="phaohoa.js"></script>
+
+
+    <div class="rotator">
+        <div class="items">
+          <img src="img/lan-anh.jpg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/thao-b3.jpeg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/my.jpg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/suong.jpg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/thao-b2.jpeg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/thảo-A.jpg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/thu-2.png" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/my2.jpeg" alt="Image Alt" />
+        </div>
+        <div class="items">
+          <img src="img/nhom.jpg" alt="Image Alt" />
+        </div>
+      </div>
+
+      <div class="waviy text">
+       <div class="text">
+        <span style="--i:1">H</span>
+        <span style="--i:2">A</span>
+        <span style="--i:3">P</span>
+        <span style="--i:4">P</span>
+        <span style="--i:5">Y</span>
+      </div>
+     <div class="t2">
+      <span style="--i:6">W</span>
+      <span style="--i:7">O</span>
+      <span style="--i:8">M</span>
+      <span style="--i:9">E</span>
+      <span style="--i:10">N</span>
+      <span style="--i:11">'</span>
+      <span style="--i:12">S</span>
+     </div>
+     <div class="t3">
+       <span style="--i:13">D</span>
+      <span style="--i:14">A</span>
+      <span style="--i:15">Y</span>
+    </div>
+
+       <div class="t4">
+        <span style="--i:16">8</span>
+        <span style="--i:17">/</span>
+        <span class="--i:18">3</span>
+       </div>
+
+         </div>
+
+       </div>
+      <!-- <p class="text">happy women's day 8/3 </p> -->
+</body>
+</html>

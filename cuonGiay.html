@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.cuon-giay {
+  width: 600px; /* Chiều rộng cuộn giấy */
+  height: 800px; /* Chiều cao cuộn giấy */
+  background-color: #fff; /* Màu nền cuộn giấy */
+  border: 2px solid #888; /* Viền cuộn giấy */
+  border-radius: 10px; /* Bán kính bo tròn */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng đổ */
+  overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+  position: relative; /* Cho phép đặt vị trí nội dung */
+}
+
+.noi-dung {
+  padding: 20px; /* Khoảng đệm nội dung */
+  font-family: "Times New Roman", serif; /* Font chữ */
+  font-size: 16px; /* Cỡ chữ */
+  line-height: 1.5; /* Khoảng cách dòng */
+  text-align: justify; /* Căn chỉnh nội dung */
+}
+
+.tieu-de {
+  font-size: 24px; /* Cỡ chữ tiêu đề */
+  font-weight: bold; /* Độ dày chữ tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.hinh-anh {
+  width: 200px; /* Chiều rộng hình ảnh */
+  height: 200px; /* Chiều cao hình ảnh */
+  float: left; /* Cho phép hình ảnh trôi sang trái */
+  margin-right: 20px; /* Khoảng cách bên phải hình ảnh */
+}
+
+.cuon-giay:before {
+  content: ""; /* Nội dung giả */
+  position: absolute; /* Vị trí tuyệt đối */
+  top: 0; /* Vị trí trên cùng */
+  left: 0; /* Vị trí bên trái */
+  width: 100px; /* Chiều rộng */
+  height: 100px; /* Chiều cao */
+  background-image: url("https://vi.pngtree.com/free-png-vectors/cu%E1%BB%99n-gi%E1%BA%A5y"); /* Hình ảnh cuộn giấy */
+  background-repeat: no-repeat; /* Lặp lại hình ảnh */
+  background-size: contain; /* Kích thước hình ảnh */
+  z-index: 1; /* Thứ tự hiển thị */
+}
+
+.cuon-giay:after {
+  content: ""; /* Nội dung giả */
+  position: absolute; /* Vị trí tuyệt đối */
+  bottom: 0; /* Vị trí dưới cùng */
+  right: 0; /* Vị trí bên phải */
+  width: 100px; /* Chiều rộng */
+  height: 100px; /* Chiều cao */
+  background-image: url("https://vi.pngtree.com/free-png-vectors/cu%E1%BB%99n-gi%E1%BA%A5y"); /* Hình ảnh cuộn giấy */
+  background-repeat: no-repeat; /* Lặp lại hình ảnh */
+  background-size: contain; /* Kích thước hình ảnh */
+  z-index: 1; /* Thứ tự hiển thị */
+}
+</style>
+<body>
+    <div class="cuon-giay">
+        <div class="noi-dung">
+          <h1 class="tieu-de">Lời Mời</h1>
+          <p>Kính gửi Ông/Bà [Tên người nhận],</p>
+          <p>Gia đình chúng tôi trân trọng kính mời Ông/Bà đến tham dự lễ [Tên sự kiện] của [Tên người được tổ chức]...</p>
+          <p>Sự kiện sẽ được tổ chức vào:</p>
+          <ul>
+            <li>Thời gian: [Thời gian]</li>
+            <li>Địa điểm: [Địa điểm]</li>
+          </ul>
+          <p>Sự hiện diện của Ông/Bà là niềm vinh hạnh cho gia đình chúng tôi.</p>
+          <p>Trân trọng kính mời!</p>
+          <p>[Tên người gửi]</p>
+</body>
+</html>

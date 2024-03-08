@@ -1,0 +1,7 @@
+.btn{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 100px;
+    z-index: 100;
+  }
