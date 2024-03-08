@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
        var conten =document.querySelector('.conten')
         var self = this;
         self.classList.toggle('clicked');
-        // conten.classList.add('unconten');
-    //     setTimeout(function() {
-    //          self.classList.add('box-out')},
-    //      4000);
-    //      setTimeout(function() {
-    //        window.location.href='hoa.html'},
-    //     5000);
+        conten.classList.add('unconten');
+        setTimeout(function() {
+             self.classList.add('box-out')},
+         4000);
+         setTimeout(function() {
+           window.location.href='hoa.html'},
+        5000);
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
