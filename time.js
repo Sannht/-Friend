@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
          4000);
          setTimeout(function() {
            window.location.href='hoa.html'},
-        5000);
+        4700);
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
