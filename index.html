@@ -51,18 +51,13 @@
     transition: transform 0.5s ease
 }
 
-.box-body .btn{
-  opacity: 0;
-  transform: translateY(0%);
-  transition: all 0.5s;
-  margin: 0 auto;
-  display: block;
-}
 .box-body:hover {
   cursor: pointer;
   -webkit-animation: box-body 1s forwards ease-in-out;
           animation: box-body 1s forwards ease-in-out;
 }
+
+
 
 .box-body.clicked{
   pointer-events: none; 
@@ -78,15 +73,7 @@
     transform: translateY(-500px);
 
 }
-.box-body.clicked .btn {
-    opacity: 1;
-    z-index: 0;
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;  
-    box-shadow: 1 1 1 1 rgb(255, 255, 255);
-    transform: translateY(240px);
-}
+
 
 .box-body.clicked .box-lid {
     animation: box-lid 1s forwards ease-in-out;
@@ -151,6 +138,8 @@
   bottom: 99%;
   z-index: -1;
 }
+
+
 .box-bowtie::before {
   left: 50%;
   -webkit-transform: translateX(-100%) skew(10deg, 10deg);
@@ -306,6 +295,39 @@
 .box-out{
   animation: box-out 2s forwards ease-in-out;
 }
+
+
+@media only screen and (max-width: 800px){
+  .box-body {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-top: 0;
+  left: 30%;
+  background-color: #cc231e;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#762c2c,#ff0303);
+}
+
+.box-lid {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  /* -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); */
+  bottom: 90%;
+  height: 50px;
+  background-color: #cc231e;
+  width: 170px;
+  border-radius: 5%;
+  box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
+}
+
+
+}
+
 </style>
 <script src="nhac.js"></script>
 <body>
@@ -316,7 +338,7 @@
           <div class="col-12 mt-5 d-flex justify-content-center">
             <div class="box">
               <div class="box-body">
-                <button class="btn"><a href="index.html"> next</a></button>
+                <!-- <button class="btn"><a href="index.html"> next</a></button> -->
                 <img class="img" src="8-3.jpg">
                 <div class="box-lid">
                   <div class="box-bowtie"></div>

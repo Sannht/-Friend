@@ -12,21 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        // window.location.href='xoay.html';},
-        // Lấy tất cả các phần tử trên trang web
-const night = document.querySelector('.night')
-const flow =document.querySelector('.flowesr')
-setTimeout(function() {
-night.classList.add('out')
-flow.classList.add('out')
-},
-10000);
-setTimeout(function(){
-    window.location.href='xoay.html'
-},
-11000);
-});
-
+    // Kiểm tra nếu tệp HTML hiện tại là 'hoa.html'
+    if (document.location.pathname.includes('hoa.html')) {
+        setTimeout(function() {
+            // Lấy tất cả các phần tử trên trang web
+            const night = document.querySelector('.night');
+            const flow = document.querySelector('.flowers');
+            
+            setTimeout(function() {
+                night.classList.add('out');
+                flow.classList.add('out');
+            }, 10000);
+            
+            setTimeout(function() {
+                window.location.href='xoay.html';
+            }, 11000);
+        }, 0); // 
+    }
 });
 
