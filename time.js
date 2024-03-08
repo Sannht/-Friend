@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.box-body').addEventListener('click', function() {
-       var img = document.querySelector('.img')
+       var conten =document.querySelector('.conten')
         var self = this;
         self.classList.toggle('clicked');
+        conten.classList.add('unconten');
         setTimeout(function() {
              self.classList.add('box-out')},
-         2000);
+         4000);
          setTimeout(function() {
            window.location.href='hoa.html'},
-        2500);
+        5000);
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
